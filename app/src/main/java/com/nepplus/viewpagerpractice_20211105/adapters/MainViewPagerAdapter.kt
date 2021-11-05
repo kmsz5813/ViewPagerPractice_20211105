@@ -3,13 +3,11 @@ package com.nepplus.viewpagerpractice_20211105.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.nepplus.viewpagerpractice_20211105.fragments.HelloFargment
-import com.nepplus.viewpagerpractice_20211105.fragments.IntroduceFargment
-import com.nepplus.viewpagerpractice_20211105.fragments.NameFargment
+import com.nepplus.viewpagerpractice_20211105.fragments.*
 
 class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getCount(): Int {
-        return 3
+        return 5
     }
 
     override fun getItem(position: Int): Fragment {
@@ -19,8 +17,14 @@ class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         else if (position == 1){
             return NameFargment()
         }
-        else{
+        else if (position == 2){
             return IntroduceFargment()
+        }
+        else if (position == 3){
+            return MaleFargment()
+        }
+        else{
+            return AgeFargment()
         }
 
     }
